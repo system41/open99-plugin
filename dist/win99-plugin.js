@@ -11,4 +11,10 @@
         if (document.currentScript.getAttribute("context") == "true") {
             document.body.oncontextmenu = "return false;"; //Turn off context menu for now.
         }
+        if ((parent.location.href == "windows99.vercel.app") || (parent.location.href == "windows99dev.vercel.app")) {
+            let win99 = true
+        }
+        if (win99) {
+            parent.sys41.user.apps.ie.data.currentURL = location.href
+        }
 }())
